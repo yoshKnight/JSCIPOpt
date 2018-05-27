@@ -168,9 +168,15 @@ int            SCIPgetNSols(SCIP* scip);
 SCIP_SOL*      SCIPgetBestSol(SCIP* scip);
 SCIP_Real      SCIPgetSolVal(SCIP* scip, SCIP_SOL* sol, SCIP_VAR* var);
 SCIP_Real      SCIPgetSolOrigObj(SCIP* scip, SCIP_SOL* sol);
+SCIP_Real      SCIPgetGap(SCIP* scip);
+SCIP_Real      SCIPgetSolvingTime(SCIP* scip);
+int            SCIPgetNNodes(SCIP* scip);
+int            SCIPgetNCuts(SCIP* scip);
 SCIP_Real      SCIPinfinity(SCIP* scip);
 SCIP_Real      SCIPepsilon(SCIP* scip);
 SCIP_Real      SCIPfeastol(SCIP* scip);
+
+
 SCIP_RETCODE   SCIPsetBoolParam(SCIP* scip, const char* name, SCIP_Bool value);
 SCIP_RETCODE   SCIPsetIntParam(SCIP* scip, const char* name, int value);
 SCIP_RETCODE   SCIPsetLongintParam(SCIP* scip, const char* name, SCIP_Longint value);

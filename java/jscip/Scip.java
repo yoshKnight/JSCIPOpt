@@ -344,6 +344,30 @@ public class Scip
       return SCIPJNI.SCIPgetSolOrigObj(_scipptr, sol.getPtr());
    }
 
+   /** wraps SCIPgetGap() */
+   public double getGap()
+   {
+      return SCIPJNI.SCIPgetGap(_scipptr);
+   }
+
+   /** wraps SCIPgetSolvingTime() */
+   public double getSolvingTime()
+   {
+      return SCIPJNI.SCIPgetSolvingTime(_scipptr);
+   }
+
+   /** wraps SCIPgetNNodes() */
+   public double getNNodes()
+   {
+      return SCIPJNI.SCIPgetNNodes(_scipptr);
+   }
+
+   /** wraps SCIPgetNCuts() */
+   public double getNCuts()
+   {
+      return SCIPJNI.SCIPgetNCuts(_scipptr);
+   }
+
    /** wraps SCIPinfinity() */
    public double infinity()
    {
@@ -384,4 +408,5 @@ public class Scip
    {
       return SCIPJNI.SCIPgetObjsense(_scipptr) == SCIP_Objsense.SCIP_OBJSENSE_MINIMIZE;
    }
+
 }
